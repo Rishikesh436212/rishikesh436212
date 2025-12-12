@@ -1,13 +1,45 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import Navbar from "@/components/Navbar";
+import HeroSection from "@/components/HeroSection";
+import AboutSection from "@/components/AboutSection";
+import ContactDetails from "@/components/ContactDetails";
+import SkillsSection from "@/components/SkillsSection";
+import ProjectsSection from "@/components/ProjectsSection";
+import CertificationsSection from "@/components/CertificationsSection";
+import AchievementsSection from "@/components/AchievementsSection";
+import HobbiesSection from "@/components/HobbiesSection";
+import ContactForm from "@/components/ContactForm";
+import Footer from "@/components/Footer";
+import { Helmet } from "react-helmet-async";
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
+    <>
+      <Helmet>
+        <title>Rishikesh T | Full-Stack Developer & ML Enthusiast</title>
+        <meta 
+          name="description" 
+          content="Rishikesh T - Aspiring Full-Stack Developer & Machine Learning Enthusiast passionate about building intelligent systems and crafting meaningful digital experiences." 
+        />
+        <meta name="keywords" content="Rishikesh T, Full-Stack Developer, Machine Learning, Python, React, FastAPI" />
+        <link rel="canonical" href="https://rishikesht.dev" />
+      </Helmet>
+      
+      <div className="min-h-screen">
+        <Navbar />
+        <main>
+          <HeroSection />
+          <AboutSection />
+          <ContactDetails />
+          <SkillsSection />
+          <ProjectsSection />
+          <CertificationsSection />
+          <AchievementsSection />
+          <HobbiesSection />
+          <ContactForm />
+        </main>
+        <Footer />
       </div>
-    </div>
+    </>
   );
 };
 
