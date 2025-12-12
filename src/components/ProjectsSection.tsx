@@ -1,28 +1,42 @@
 import { useEffect, useRef, useState } from "react";
-import { ExternalLink, Github } from "lucide-react";
+import { Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const projects = [
   {
-    title: "Fraud Detection System",
-    description: "A machine learning model to detect fraudulent transactions using advanced classification algorithms and feature engineering techniques.",
-    tech: ["Python", "Scikit-learn", "Pandas", "XGBoost"],
-    github: "#",
-    demo: "#",
+    title: "Neuro Symbolic AI – Backend",
+    description: "Backend project integrating neural networks and symbolic reasoning using FastAPI.",
+    tech: ["FastAPI", "Python", "Neural Networks", "AI"],
+    github: "https://github.com/Rishikesh436212",
+    icon: "🧠",
   },
   {
-    title: "FastAPI Backend Template",
-    description: "A scalable REST API template built with FastAPI, featuring authentication, database integration, and comprehensive documentation.",
-    tech: ["FastAPI", "PostgreSQL", "Docker", "JWT"],
-    github: "#",
-    demo: "#",
+    title: "FastAPI – Bank & Attendance System",
+    description: "Built backend APIs for banking and attendance management.",
+    tech: ["FastAPI", "Python", "PostgreSQL", "REST API"],
+    github: "https://github.com/Rishikesh436212",
+    icon: "🏦",
   },
   {
-    title: "Personal Portfolio",
-    description: "A modern, animated portfolio website showcasing skills, projects, and achievements with a dark theme and smooth interactions.",
-    tech: ["React", "TypeScript", "Tailwind CSS", "Framer Motion"],
-    github: "#",
-    demo: "#",
+    title: "Fraud Detection",
+    description: "ML project analyzing transaction patterns to detect fraud.",
+    tech: ["Python", "Scikit-learn", "Pandas", "ML"],
+    github: "https://github.com/Rishikesh436212",
+    icon: "🔍",
+  },
+  {
+    title: "Sentiment Analysis",
+    description: "ML project performing text sentiment analysis.",
+    tech: ["Python", "NLP", "Machine Learning", "Text Analysis"],
+    github: "https://github.com/Rishikesh436212",
+    icon: "💬",
+  },
+  {
+    title: "Email-Service",
+    description: "Backend project to send and manage emails.",
+    tech: ["FastAPI", "Python", "SMTP", "Backend"],
+    github: "https://github.com/Rishikesh436212",
+    icon: "📧",
   },
 ];
 
@@ -70,20 +84,13 @@ const ProjectsSection = () => {
             >
               <div className="flex items-start justify-between mb-4">
                 <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                  <span className="text-2xl">🚀</span>
+                  <span className="text-2xl">{project.icon}</span>
                 </div>
-                <div className="flex gap-2">
-                  <Button variant="ghost" size="icon" asChild className="w-9 h-9">
-                    <a href={project.github} target="_blank" rel="noopener noreferrer">
-                      <Github className="w-4 h-4" />
-                    </a>
-                  </Button>
-                  <Button variant="ghost" size="icon" asChild className="w-9 h-9">
-                    <a href={project.demo} target="_blank" rel="noopener noreferrer">
-                      <ExternalLink className="w-4 h-4" />
-                    </a>
-                  </Button>
-                </div>
+                <Button variant="ghost" size="icon" asChild className="w-9 h-9">
+                  <a href={project.github} target="_blank" rel="noopener noreferrer">
+                    <Github className="w-4 h-4" />
+                  </a>
+                </Button>
               </div>
 
               <h3 className="font-display font-bold text-xl text-foreground mb-3 group-hover:text-primary transition-colors">
